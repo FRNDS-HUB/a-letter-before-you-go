@@ -1,0 +1,384 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f2e9d8">
+
+    <title>A Letter Before You Go</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="petals" aria-hidden="true">
+        <span>✿</span><span>❀</span><span>✿</span>
+        <span>❀</span><span>✿</span><span>❀</span>
+    </div>
+
+    <main class="book">
+
+        <header class="top-label">
+            <span>A PERSONAL LETTER</span>
+            <span>MADE WITH SINCERITY</span>
+        </header>
+
+        <div class="page-counter">
+            <span id="pageNumber">01</span>
+            <span class="counter-line"></span>
+            <span>05</span>
+        </div>
+
+        <!-- PAGE 1 : OPENING -->
+
+        <section class="page active" id="page1">
+
+            <div class="flower-decoration flower-top">✿</div>
+            <div class="flower-decoration flower-bottom">❀</div>
+
+            <div class="opening-content">
+
+                <p class="eyebrow">A LETTER FOR SOMEONE SPECIAL</p>
+
+                <div class="envelope" id="envelope">
+                    <div class="envelope-back"></div>
+
+                    <div class="envelope-paper">
+                        <span>A little something</span>
+                        <span>from my heart.</span>
+                    </div>
+
+                    <div class="envelope-flap"></div>
+                    <div class="wax-seal">♥</div>
+                </div>
+
+                <h1>Before You Go</h1>
+
+                <p class="opening-description">
+                    You don't have to read this now.
+                    But if you do, I hope you read it
+                    with an open heart.
+                </p>
+
+                <button class="primary-btn" id="openLetter">
+                    Open this letter <span>→</span>
+                </button>
+
+                <p class="handwriting">
+                    Written with all my heart.
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- PAGE 2 : LETTER -->
+
+        <section class="page" id="page2">
+
+            <div class="paper-content">
+
+                <p class="eyebrow">CHAPTER I · WORDS FROM MY HEART</p>
+
+                <h2>Things I Never Said</h2>
+
+                <div class="ornament">❧ ❀ ❧</div>
+
+                <p class="letter-greeting">Dear You,</p>
+
+                <div class="letter-body">
+
+                    <p>
+                        Aku sebenarnya tidak tahu harus mulai dari mana.
+                        Ada banyak hal yang selama ini ingin aku sampaikan,
+                        tetapi setiap kali mencoba mengatakannya,
+                        rasanya selalu ada sesuatu yang menahanku.
+                    </p>
+
+                    <p>
+                        Aku mungkin bukan seseorang yang selalu ada
+                        di dekatmu. Aku lebih sering memperhatikan
+                        dari kejauhan, mengingat hal-hal sederhana,
+                        dan sesekali menikmati percakapan kita.
+                    </p>
+
+                    <p>
+                        Mungkin bagimu semuanya biasa saja.
+                        Namun, tanpa kamu sadari, hal-hal sederhana
+                        itu punya arti tersendiri bagiku.
+                    </p>
+
+                    <p>
+                        Ketika aku tahu kamu akan pergi,
+                        aku mulai takut. Takut kehilangan kesempatan
+                        untuk mengenalmu lebih jauh, takut tidak sempat
+                        mengatakan apa yang sebenarnya aku rasakan,
+                        dan takut suatu hari nanti kita hanya menjadi
+                        dua orang yang pernah saling mengenal.
+                    </p>
+
+                    <p>
+                        Aku tidak tahu apakah kamu pernah menyadari
+                        semua ini. Tetapi kali ini aku ingin mencoba
+                        untuk jujur.
+                    </p>
+
+                </div>
+
+                <p class="letter-signature">With sincerity,</p>
+                <p class="signature-name">Someone who cares.</p>
+
+            </div>
+
+            <div class="navigation">
+                <button class="secondary-btn" data-prev>← Previous</button>
+                <button class="primary-btn" data-next>Next page →</button>
+            </div>
+
+        </section>
+
+
+        <!-- PAGE 3 : MUSIC -->
+
+        <section class="page" id="page3">
+
+            <div class="flower-decoration flower-top">✿</div>
+
+            <div class="music-content">
+
+                <p class="eyebrow">CHAPTER II · A LITTLE MELODY</p>
+
+                <h2>If My Feelings Had a Song</h2>
+
+                <div class="ornament">❀ ─ ❀</div>
+
+                <p class="section-description">
+                    Some feelings are easier to express through music.
+                </p>
+
+                <div class="music-player">
+
+                    <div class="album-cover" id="albumCover">
+                        <span>♫</span>
+                        <p>A LITTLE PIECE OF MY HEART</p>
+                    </div>
+
+                    <div class="music-info">
+
+                        <p class="song-label">NOW PLAYING</p>
+
+                        <h3 id="songTitle">A Song for You</h3>
+
+                        <p id="songArtist">Your chosen artist</p>
+
+                        <audio id="letterMusic" preload="metadata"></audio>
+
+                        <div class="music-progress">
+                            <input
+                                type="range"
+                                id="musicProgress"
+                                min="0"
+                                max="100"
+                                value="0"
+                            >
+
+                            <div class="time-display">
+                                <span id="currentTime">0:00</span>
+                                <span id="duration">0:00</span>
+                            </div>
+                        </div>
+
+                        <div class="music-controls">
+
+                            <button id="previousSong" aria-label="Previous song">|◀</button>
+
+                            <button id="musicToggle" class="play-button" aria-label="Play music">
+                                ▶
+                            </button>
+
+                            <button id="nextSong" aria-label="Next song">▶|</button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <p class="music-note">
+                    "Maybe some songs can say what words cannot."
+                </p>
+
+                <p class="handwriting">
+                    A melody that reminds me of you.
+                </p>
+
+            </div>
+
+            <div class="navigation">
+                <button class="secondary-btn" data-prev>← Previous</button>
+                <button class="primary-btn" data-next>Next page →</button>
+            </div>
+
+        </section>
+
+
+        <!-- PAGE 4 : MEMORIES -->
+
+        <section class="page" id="page4">
+
+            <div class="flower-decoration flower-top">✿</div>
+
+            <div class="paper-content memories-content">
+
+                <p class="eyebrow">CHAPTER III · LITTLE THINGS</p>
+
+                <h2>Little Things I Remember</h2>
+
+                <div class="ornament">❧ ❀ ❧</div>
+
+                <p class="section-description">
+                    Not every memory needs a photograph to be remembered.
+                </p>
+
+                <div class="memory-list">
+
+                    <article class="memory-card">
+                        <span>01</span>
+                        <div>
+                            <h3>Your Smile</h3>
+                            <p>
+                                Ada hal sederhana dari senyummu
+                                yang terkadang masih teringat.
+                            </p>
+                        </div>
+                        <span class="memory-flower">✿</span>
+                    </article>
+
+                    <article class="memory-card">
+                        <span>02</span>
+                        <div>
+                            <h3>Your Way of Speaking</h3>
+                            <p>
+                                Percakapan yang mungkin biasa bagimu,
+                                tetapi punya tempat tersendiri bagiku.
+                            </p>
+                        </div>
+                        <span class="memory-flower">❀</span>
+                    </article>
+
+                    <article class="memory-card">
+                        <span>03</span>
+                        <div>
+                            <h3>The Little Things</h3>
+                            <p>
+                                Hal-hal kecil yang mungkin tidak pernah
+                                kamu sadari telah aku ingat.
+                            </p>
+                        </div>
+                        <span class="memory-flower">✿</span>
+                    </article>
+
+                </div>
+
+                <p class="memory-caption">
+                    Some moments stay, even without photographs.
+                </p>
+
+            </div>
+
+            <div class="navigation">
+                <button class="secondary-btn" data-prev>← Previous</button>
+                <button class="primary-btn" data-next>Next page →</button>
+            </div>
+
+        </section>
+
+
+        <!-- PAGE 5 : FINAL MESSAGE -->
+
+        <section class="page" id="page5">
+
+            <div class="flower-decoration flower-top">✿</div>
+            <div class="flower-decoration flower-bottom">❀</div>
+
+            <div class="final-content">
+
+                <p class="eyebrow">THE FINAL CHAPTER · BUT NOT THE END</p>
+
+                <h2>I Hope I'm Not Too Late</h2>
+
+                <div class="ornament">❧ ♥ ❧</div>
+
+                <div class="final-letter">
+
+                    <p>
+                        Aku tidak tahu apakah aku masih punya kesempatan.
+                        Tapi jika masih ada, aku ingin mencoba.
+                    </p>
+
+                    <p>
+                        Aku ingin mengenalmu lebih jauh, mendengarkan
+                        lebih banyak ceritamu, dan berusaha menjadi
+                        seseorang yang bisa membuatmu merasa dihargai.
+                    </p>
+
+                    <p>
+                        Aku tidak berharap kamu harus menjawab semuanya
+                        sekarang. Aku hanya ingin kamu tahu bahwa
+                        perasaan ini sungguh ada.
+                    </p>
+
+                    <p>
+                        Jika ternyata perasaan kita tidak sama,
+                        aku akan berusaha menghargainya.
+                        Namun, jika masih ada ruang untuk kita
+                        mengenal satu sama lain, aku ingin memperjuangkannya.
+                    </p>
+
+                    <p>
+                        Aku tidak ingin memaksamu untuk tinggal.
+                        Aku hanya berharap kepergianmu dari tempat ini
+                        bukan berarti kita harus berhenti saling mengenal.
+                    </p>
+
+                    <p class="final-emphasis">
+                        Maybe it's not too late for us.
+                    </p>
+
+                </div>
+
+                <div class="final-signature">
+                    <p>With all the sincerity in my heart,</p>
+                    <span>Someone who truly cares.</span>
+                </div>
+
+                <div class="final-heart">♡</div>
+
+                <button class="secondary-btn" id="restartButton">
+                    ↶ Read again
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <footer class="bottom-decoration">
+            <span>✿</span>
+            <span>MADE WITH LOVE & SINCERITY</span>
+            <span>✿</span>
+        </footer>
+
+    </main>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
